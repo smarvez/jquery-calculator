@@ -8,11 +8,9 @@ $(document).ready(function () {
 
   //if statements for operators and add targets to array
   if (target === 'C') {
-    $('#clear').click(function() {
       location.reload();
-      $('#screen').empty()
+      $('#screen').text('');
       arr = [];
-    })
   }
 
   if (target === '÷') {
@@ -32,7 +30,15 @@ $(document).ready(function () {
   $('#equals').click(function(event) {
     $('#screen').empty()
     let result = arr.join('');
-    let total = eval(result);
-    $('#screen').append(total);
+    try {
+      let total = eval(result);
+      if (total === Infinity) {
+        screen.text('ERROR');
+      }
+      $('#screen').append(total);
+    }
+    catch(err) {
+      alert('error');
+    }
   })
 })

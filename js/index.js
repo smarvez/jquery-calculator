@@ -1,3 +1,7 @@
+function calculate(result) {
+  return eval(result);
+}
+
 $(document).ready(function () {
   var arr = [];
   var calculatorScreen = $('#screen');
@@ -31,7 +35,7 @@ $(document).ready(function () {
     $('#screen').empty()
     let result = arr.join('');
     try {
-      let total = eval(result);
+      let total = calculate(result);
       if (total === Infinity) {
         screen.text('ERROR');
       }

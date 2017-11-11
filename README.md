@@ -1,5 +1,7 @@
 # jQuery Calculator
 
+Project is published and running at reflective-amount.surge.sh
+
 Use jQuery to build a basic calculator using the provided HTML and CSS.
 
 ![Example](screenshots/example.gif)
